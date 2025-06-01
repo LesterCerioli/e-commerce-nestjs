@@ -10,6 +10,7 @@ import { ProductsModule } from './products/products.module';
 import { SubscriptionsModule } from './subscriptions/subscriptions.module';
 import { StripersModule } from './stripers/stripers.module';
 import { UsersModule } from './users/users.module';
+import { CoreModule } from './core/core.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { UsersModule } from './users/users.module';
     InventoriesModule,
     StocksModule,
     StripersModule,
+    CoreModule,
   ],
   controllers: [AppController],
   providers: [AppService],
