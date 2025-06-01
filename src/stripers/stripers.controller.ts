@@ -1,11 +1,18 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, HttpCode, HttpStatus } from '@nestjs/common';
 import { StripersService } from './stripers.service';
 import { CreateStriperDto } from './dto/create-striper.dto';
 import { UpdateStriperDto } from './dto/update-striper.dto';
+import { CreateChargeDto } from './dto/create-charge.dto';
 
-@Controller('stripers')
+@Controller('v1')
 export class StripersController {
   constructor(private readonly stripersService: StripersService) {}
+
+  @Post('charges')
+  @HttpCode(HttpStatus.CREATED)
+  async createCharge(@Body() createChargeDto: CreateChargeDto) {
+    return this.stripersService.createCharge(createChargeDto);
+  }
 
   @Post()
   create(@Body() createStriperDto: CreateStriperDto) {
