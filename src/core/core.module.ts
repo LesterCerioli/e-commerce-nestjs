@@ -1,9 +1,8 @@
 import { Module } from '@nestjs/common';
-import { CoreService } from './core.service';
-import { CoreController } from './core.controller';
+import { PasswordService } from './services/password.service';
 
 @Module({
-  controllers: [CoreController],
-  providers: [CoreService],
+  providers: [PasswordService],
+  exports: [PasswordService],
 })
 export class CoreModule {}
