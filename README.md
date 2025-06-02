@@ -1,5 +1,46 @@
 # E-commerce Nest Js Project
 
+## NestJS E-Commerce Backend
+A modular, serverless-ready backend API for modern e-commerce platforms
+
+Key Features:
+
+    💳 Stripe Integration: Secure payment processing with charges API
+
+    🔐 JWT Authentication: User management with password reset flows
+
+    🚀 Vercel Optimized: Full serverless deployment support
+
+    🗄 PostgreSQL: Relational data storage with TypeORM
+
+    📦 Domain-Driven Design: Clean separation of core, payments, and user modules
+
+Tech Stack:
+
+    Backend: NestJS (TypeScript)
+
+    Infrastructure: Vercel Serverless Functions
+
+    Database: PostgreSQL + TypeORM
+
+    Payments: Stripe API
+
+Use Cases:
+
+    E-commerce platforms
+
+    Subscription services
+
+    Digital marketplaces
+
+Built with scalability and developer experience in mind, this boilerplate provides production-ready patterns for:
+✔️ API versioning
+✔️ Event-driven architecture
+✔️ Automated testing
+✔️ CI/CD pipelines
+
+Deployable with one click to Vercel's global edge network.
+
 ## NestJS E-Commerce API with Vercel Deployment
 
 ![NestJS](https://img.shields.io/badge/nestjs-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
