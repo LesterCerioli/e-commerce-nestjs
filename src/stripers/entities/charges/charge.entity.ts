@@ -1,5 +1,4 @@
-import { Amount, Currency, PaymentSource } from "../../value-objects";
-
+import { Amount, Currency, PaymentSource } from '../../value-objects';
 
 export class Charge {
   private id: string;
@@ -10,7 +9,7 @@ export class Charge {
     private readonly amount: Amount,
     private readonly currency: Currency,
     private readonly source: PaymentSource,
-    private readonly customerId?: string
+    private readonly customerId?: string,
   ) {
     this.id = this.generateId();
     this.createdAt = new Date();
@@ -25,11 +24,10 @@ export class Charge {
   private validate(): void {
     // Additional business rules
     if (this.amount.getValue() > 1000000) {
-      throw new Error("Amount exceeds maximum charge limit");
+      throw new Error('Amount exceeds maximum charge limit');
     }
   }
 
-  
   markAsCompleted(): void {
     this.status = 'completed';
   }
@@ -37,7 +35,7 @@ export class Charge {
   markAsFailed(): void {
     this.status = 'failed';
   }
-  
+
   getId(): string {
     return this.id;
   }

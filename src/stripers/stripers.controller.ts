@@ -1,4 +1,14 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, HttpCode, HttpStatus } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  HttpCode,
+  HttpStatus,
+} from '@nestjs/common';
 import { StripersService } from './stripers.service';
 import { CreateStriperDto } from './dto/create-striper.dto';
 import { UpdateStriperDto } from './dto/update-striper.dto';
